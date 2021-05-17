@@ -19,10 +19,10 @@ module.exports = {
           message = message.first()
           let sellerkey = message.content;
 
-                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=setseller`)
+                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=setseller&format=text`)
     .then(res => res.text())
     .then(text => {
-    if(text == "set")
+    if(text == "Seller Key Successfully Found")
     {
     message.delete()
     db.fetch(`token_${message.guild.id}`)
