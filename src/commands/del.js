@@ -23,10 +23,10 @@ module.exports = {
           message = message.first()
           let key = message.content;
 
-                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=del&key=${key}`)
+                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=del&key=${key}&format=text`)
     .then(res => res.text())
     .then(text => {
-    if(text == "deleted")
+    if(text == "Successfully Deleted License")
     {
     message.channel.send(new Discord.MessageEmbed().setTitle('Key Successfully Deleted!').addField('Deleted By:', message.author).addField('Key Deleted:', `\`${key}\``).setColor("GREEN").setTimestamp());
     }
