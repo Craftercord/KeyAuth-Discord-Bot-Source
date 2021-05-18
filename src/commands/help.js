@@ -23,7 +23,6 @@ module.exports = {
         .addField('`info`', `Key Information. \nArgs: **${prefix}info**`)
 	.addField('`stats`', `Application Statistics. \nArgs: **${prefix}stats**`)
         .addField('`reset`', `Reset key. \nArgs: **${prefix}reset**`)
-	.addField('`resethash`', `Reset App Hash. \nArgs: **${prefix}resethash**`)
         .setFooter('KeyAuth Discord Bot', client.user.displayAvatarURL())
         .setTimestamp()
 
