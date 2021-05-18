@@ -23,10 +23,10 @@ module.exports = {
           message = message.first()
           let key = message.content;
 
-                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=reset&key=${key}`)
+                  fetch(`https://keyauth.com/api/seller/?sellerkey=${sellerkey}&type=reset&key=${key}&format=text`)
     .then(res => res.text())
     .then(text => {
-    if(text == "reset")
+    if(text == "Successfully Reset License")
     {
     message.channel.send(new Discord.MessageEmbed().setTitle('Key Successfully Reset!').addField('Deleted By:', message.author).addField('Key Reset:', `\`${key}\``).setColor("GREEN").setTimestamp());
     }
