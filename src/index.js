@@ -55,6 +55,7 @@ if(prefix === null) prefix = default_prefix;
         .addField('`info`', `Key Information. \nArgs: **${prefix}info**`)
 	.addField('`stats`', `Application Statistics. \nArgs: **${prefix}stats**`)
         .addField('`reset`', `Reset key. \nArgs: **${prefix}reset**`)
+	.addField('`upload`', `Upload File. \nArgs: **${prefix}reset**`)
         .setFooter('KeyAuth Discord Bot', client.user.displayAvatarURL())
         .setTimestamp()
 
